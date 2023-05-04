@@ -43,9 +43,22 @@ export default {
   data() {
     return {
       items: [
-        { id: 1, name: "Apple" },
-        { id: 2, name: "Banana" },
-        { id: 3, name: "Orange" },
+        {
+          id: 1,
+          name: "Чистое Небо, ",
+          subname: "корпус 10, III кв. 2022 г.",
+          price: "7 733 300 руб.",
+          type: "Квартира",
+          status: "Уступка от юр. лица",
+          address:
+            "Лен. область, Всеволожский район,д. Кудрово, ул. Столичная, д. 5, к. 1",
+          appartament: "кв. 62",
+          appartamentType: "1 комн. кв.",
+          size: "234.38 м²",
+          floor: "7 этаж",
+          picture: "",
+          addedDate: "21/11/2020",
+        },
       ],
       searchQuery: "",
       clickedCheckbox: false,
@@ -138,7 +151,7 @@ export default {
     margin-left: 7.36px;
     margin-right: 13.88px;
   }
-  .filterArea{
+  .filterArea {
     margin: 25px auto 25px 0px;
   }
 }
