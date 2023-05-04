@@ -31,29 +31,32 @@
       </div>
     </div>
 
-    <h2>Items:</h2>
-    <div v-for="item in filteredItems" :key="item.id">
-      <p>{{ item.id }} - {{ item.name }}</p>
-    </div>
+    <card :items="filteredItems"></card>
   </div>
 </template>
 
 <script>
+import Card from "./Card.vue";
 export default {
+  components: { Card },
   data() {
     return {
       items: [
         {
+          selected: false,
           id: 1,
           name: "Чистое Небо, ",
           subname: "корпус 10, III кв. 2022 г.",
           price: "7 733 300 руб.",
-          type: "Квартира",
+          type: {
+            enum: 1,
+            text: "Квартира",
+          },
           status: "Уступка от юр. лица",
           address:
             "Лен. область, Всеволожский район,д. Кудрово, ул. Столичная, д. 5, к. 1",
-          appartament: "кв. 62",
-          appartamentType: "1 комн. кв.",
+          apartment: "кв. 62",
+          apartmentType: "1 комн. кв.",
           size: "234.38 м²",
           floor: "7 этаж",
           picture: "",
